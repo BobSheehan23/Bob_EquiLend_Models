@@ -4,17 +4,12 @@ A comprehensive suite of quantitative models for securities lending and short sq
 
 ## 🚀 Quick Start
 
-1. **Open the development environment:**
+1. **👉 START HERE - Run the main notebook:**
    ```bash
-   jupyter lab Notebooks/Factor_Development.ipynb
+   jupyter lab Notebooks/Run_This_First.ipynb
    ```
 
-2. **For comprehensive analysis:**
-   ```bash
-   jupyter lab Notebooks/EquiLend_Consolidated_Playbook.ipynb
-   ```
-
-3. **Browse model documentation:**
+2. **Browse model documentation:**
    - See `Docs/` folder for detailed model specifications
    - Review branded model documentation for each factor
 
@@ -23,8 +18,7 @@ A comprehensive suite of quantitative models for securities lending and short sq
 ```
 Bob_EquiLend_Models/
 ├── 📊 Notebooks/                    # Interactive notebooks
-│   ├── EquiLend_Consolidated_Playbook.ipynb  # Main analysis workflow
-│   └── Factor_Development.ipynb     # Factor development & testing
+│   └── Run_This_First.ipynb        # 👉 MAIN NOTEBOOK - Everything you need!
 ├── 📋 Docs/                         # Documentation & specifications
 │   ├── Model documentation (30+ Word docs)
 │   ├── Daily digest templates
@@ -65,10 +59,10 @@ Bob_EquiLend_Models/
 
 ## 🔄 Workflow
 
-1. **Research & Development** → Use `Factor_Development.ipynb` for interactive analysis
-2. **Comprehensive Analysis** → Use `EquiLend_Consolidated_Playbook.ipynb` for full workflow
-3. **Documentation Review** → Browse `Docs/` for detailed model specifications
-4. **Future Modularization** → Extract stable factors to Python modules
+1. **🚀 Start Here** → Open `Run_This_First.ipynb` - contains everything you need!
+2. **📊 Analyze** → Run cells to develop factors, test performance, and visualize results
+3. **📋 Reference** → Browse `Docs/` for detailed model specifications
+4. **🔧 Expand** → Add new factors directly in the notebook or extract to modules
 
 ## 📊 Current Implementation
 
