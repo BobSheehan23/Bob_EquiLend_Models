@@ -4,38 +4,45 @@ A comprehensive suite of quantitative models for securities lending and short sq
 
 ## 🚀 Quick Start
 
-1. **Set up environment:**
+1. **Open the development environment:**
    ```bash
-   pip install -r requirements.txt
+   jupyter lab Notebooks/Factor_Development.ipynb
    ```
 
-2. **Configure API keys in `.env`:**
+2. **For comprehensive analysis:**
    ```bash
-   FRED_KEY=your_fred_api_key
-   GEMINI_API_KEY=your_gemini_key
-   POLYGON_KEY=your_polygon_key
+   jupyter lab Notebooks/EquiLend_Consolidated_Playbook.ipynb
    ```
 
-3. **Run the main analysis:**
-   ```bash
-   jupyter lab nb/EquiLend_Consolidated_Playbook.ipynb
-   ```
+3. **Browse model documentation:**
+   - See `Docs/` folder for detailed model specifications
+   - Review branded model documentation for each factor
 
 ## 📁 Project Structure
 
 ```
 Bob_EquiLend_Models/
-├── 📊 nb/                           # Interactive notebooks
-│   ├── EquiLend_Consolidated_Playbook.ipynb
-│   └── Factor_Development.ipynb
-├── 🐍 Python Modules/               # Reusable model code
-│   ├── core_factors.py             # Core short squeeze factors
-│   └── extended_factors.py         # Extended analysis models
-├── 🏭 src/                          # Production scripts
-│   └── daily_digest.py             # Automated report generation
-├── 📋 docs/                         # Documentation
-└── 🔧 data/                         # Data files (excluded from Git)
+├── 📊 Notebooks/                    # Interactive notebooks
+│   ├── EquiLend_Consolidated_Playbook.ipynb  # Main analysis workflow
+│   └── Factor_Development.ipynb     # Factor development & testing
+├── 📋 Docs/                         # Documentation & specifications
+│   ├── Model documentation (30+ Word docs)
+│   ├── Daily digest templates
+│   └── Technical specifications
+└── 📖 README.md                     # Project documentation
 ```
+
+### 🔧 **Current Development Status:**
+
+**✅ Working Components:**
+- Interactive notebooks with embedded factor classes
+- Comprehensive model documentation
+- Factor development environment
+
+**⚠️ In Development:**
+- Modular Python structure (factors currently defined inline)
+- Automated production scripts
+- Data pipeline integration
 
 ## 🧮 Available Models
 
@@ -58,42 +65,68 @@ Bob_EquiLend_Models/
 
 ## 🔄 Workflow
 
-1. **Research & Development** → Use notebooks for interactive analysis
-2. **Production Code** → Move stable functions to Python modules
-3. **Daily Analysis** → Import modules into consolidated playbook
-4. **Automation** → Use modules directly for scheduled processes
+1. **Research & Development** → Use `Factor_Development.ipynb` for interactive analysis
+2. **Comprehensive Analysis** → Use `EquiLend_Consolidated_Playbook.ipynb` for full workflow
+3. **Documentation Review** → Browse `Docs/` for detailed model specifications
+4. **Future Modularization** → Extract stable factors to Python modules
 
-## 📊 Usage Examples
+## 📊 Current Implementation
+
+**Factor Development Notebook** includes embedded classes for:
 
 ```python
-# Import core factors
-from core_factors import ShortInterestMomentum, BorrowCostShock
+# Core factor classes (defined inline)
+class ShortInterestMomentum:
+    """Short Interest Momentum (SIM) - tracks accelerating short build-up"""
+    
+class BorrowCostShock:
+    """Borrow Cost Shock (BCS) - detects sudden fee spikes"""
 
-# Calculate factors
+# Usage in notebook
 sim = ShortInterestMomentum()
 sim_scores = sim.score(data)
-
-# Generate daily digest
-from daily_digest import generate_digest
-digest = generate_digest(data)
 ```
+
+**Documentation Available:**
+- 30+ Word documents with detailed model specifications
+- Technical implementation guides
+- Daily digest templates
 
 ## 🛠️ Dependencies
 
-- pandas, numpy - Data manipulation
-- matplotlib, seaborn - Visualization
-- scikit-learn - Machine learning utilities
-- requests - API data fetching
-- python-dotenv - Environment management
+**Core Libraries (install as needed):**
+- `pandas`, `numpy` - Data manipulation and analysis
+- `matplotlib`, `seaborn` - Visualization and plotting
+- `jupyter` - Interactive notebook environment
+- `datetime` - Date/time handling (built-in)
 
-## 📈 Performance
+**Installation:**
+```bash
+pip install pandas numpy matplotlib seaborn jupyter
+```
 
-The hybrid notebook + module approach provides:
+**Optional Enhancements:**
+- `scikit-learn` - Machine learning utilities
+- `requests` - API data fetching
+- `python-dotenv` - Environment management
+
+## 📈 Current Status
+
+The notebook-based development approach provides:
+
 - ✅ Interactive analysis and visualization
-- ✅ Clean, testable, reusable code
-- ✅ Version control for production logic
-- ✅ Automated execution capabilities
+- ✅ Rapid prototyping and testing
+- ✅ Self-contained factor development
+- ✅ Comprehensive documentation
+- ⚠️ Ready for modularization when needed
+
+## 🚀 Next Steps
+
+1. **Extract stable factors** to Python modules
+2. **Add production scripts** for automated analysis
+3. **Implement data pipeline** for live data integration
+4. **Create requirements.txt** for dependency management
 
 ---
 
-*Last updated: July 2025*
+**Last updated: July 2025**
