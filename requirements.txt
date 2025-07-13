@@ -1,0 +1,8 @@
+# Core data science and analysis
+pandas
+numpy
+python-docx
+oracledb
+
+# Environment variable management
+python-dotenv
