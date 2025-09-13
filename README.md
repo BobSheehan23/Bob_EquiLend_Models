@@ -1,4 +1,4 @@
-# Bob_EquiLend_Models
+# Bob__Models
 
 A comprehensive suite of quantitative models for securities lending and short squeeze analysis.
 
